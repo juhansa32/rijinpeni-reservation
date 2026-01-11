@@ -263,5 +263,15 @@ footer {
   border-radius: 10px;
   font-size: 15px;
 }
+@media (min-width: 769px) {
+  .section {
+    display: block;
+  }
+
+  .section .goods {
+    max-width: 420px;
+    margin: 0 auto 24px;
+  }
+}
 
 

@@ -225,5 +225,43 @@ footer {
   max-width: 240px;
   height: auto;
 }
+/* 굿즈 전체 레이아웃 */
+.section .goods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #111;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+/* 굿즈 이미지 */
+.goods img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  background: #000;
+}
+
+/* 굿즈 텍스트 */
+.goods label {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* 셀렉트 & 인풋 */
+.goods select,
+.goods input[type="number"] {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+}
 
 

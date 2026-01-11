@@ -1,3 +1,6 @@
+/* =====================
+   기본 설정
+===================== */
 * {
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
@@ -10,16 +13,18 @@ body {
   line-height: 1.6;
 }
 
-/* 헤더 */
+/* =====================
+   헤더
+===================== */
 .hero {
   text-align: center;
-  padding: 40px 20px 30px;
+  padding: 48px 20px 36px;
   background: radial-gradient(circle at top, #1b1b1b, #0e0e0e);
 }
 
 .logo {
-  max-width: 180px;
-  margin-bottom: 15px;
+  max-width: 200px;
+  margin-bottom: 16px;
 }
 
 .date {
@@ -32,21 +37,25 @@ body {
   opacity: 0.6;
 }
 
-/* 섹션 공통 */
+/* =====================
+   섹션 공통
+===================== */
 .section {
-  padding: 25px 18px;
+  padding: 32px 20px;
   border-bottom: 1px solid #1f1f1f;
 }
 
 .section h2 {
-  margin-bottom: 15px;
-  font-size: 18px;
+  margin-bottom: 18px;
+  font-size: 20px;
 }
 
-/* 입력 & 셀렉트 */
+/* =====================
+   입력 요소
+===================== */
 label {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   font-size: 14px;
 }
 
@@ -60,39 +69,63 @@ input[type="tel"] {
   background: #1a1a1a;
   border: 1px solid #333;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 15px;
 }
 
-/* 굿즈 */
-.goods {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 20px;
-  align-items: center;
+/* =====================
+   굿즈 카드 (핵심)
+===================== */
+.section .goods {
+  background: #111;
+  border-radius: 18px;
+  padding: 20px;
+  margin: 0 auto 28px;
+  max-width: 420px;
+  text-align: center;
 }
 
-.goods img {
-  width: 90px;
-  border-radius: 10px;
+.section .goods img {
+  width: 100%;
+  max-width: 300px;   /* PC에서도 크게 */
+  height: auto;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  background: #000;
 }
 
+.section .goods label {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.goods select,
+.goods input[type="number"] {
+  margin-top: 10px;
+}
+
+/* 매진 상태 */
 .goods.sold {
-  opacity: 0.6;
+  opacity: 0.5;
+  position: relative;
 }
 
 .soldout {
   position: absolute;
+  top: 14px;
+  left: 14px;
   background: #b00020;
   color: #fff;
   font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
-/* 예매 절차 */
+/* =====================
+   예매 절차
+===================== */
 .process {
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 .process li {
@@ -100,43 +133,43 @@ input[type="tel"] {
   font-size: 14px;
 }
 
-/* 동의 */
+/* =====================
+   동의
+===================== */
 .section input[type="checkbox"] {
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
-/* 요약 */
+/* =====================
+   신청 요약
+===================== */
 .total {
   background: #151515;
 }
 
-.notice {
-  font-size: 13px;
-  opacity: 0.7;
-  margin-bottom: 10px;
-}
-
 #summary {
   white-space: pre-line;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 #total {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-/* 버튼 */
+/* =====================
+   버튼
+===================== */
 button {
   width: 100%;
-  padding: 14px;
+  padding: 16px;
   background: #ffffff;
   color: #000;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   border: none;
-  border-radius: 10px;
+  border-radius: 14px;
   cursor: pointer;
 }
 
@@ -144,134 +177,54 @@ button:hover {
   background: #e5e5e5;
 }
 
-/* 푸터 */
+/* =====================
+   푸터
+===================== */
 footer {
   text-align: center;
-  padding: 20px 15px 40px;
+  padding: 28px 18px 50px;
   font-size: 12px;
   opacity: 0.6;
 }
 
-/* 모바일 최적화 */
-@media (max-width: 480px) {
+/* =====================
+   PC 전용 레이아웃 강화
+===================== */
+@media (min-width: 1024px) {
+  .section {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
   .logo {
-    max-width: 150px;
+    max-width: 240px;
   }
 
   .section h2 {
-    font-size: 17px;
+    font-size: 22px;
   }
 
-  .goods {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .goods img {
-    width: 100%;
-    max-width: 220px;
+  /* 굿즈 2열 그리드 */
+  .goods-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
 }
 
-/* 하단 고정 버튼 */
-.fixed-submit {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #000;
-  padding: 12px;
-  box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
-}
-
-.fixed-submit button {
-  width: 100%;
-  padding: 16px;
-  font-size: 18px;
-  font-weight: bold;
-  background: #fff;
-  color: #000;
-  border-radius: 12px;
-}
-
-/* 모달 */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-content {
-  background: #111;
-  padding: 24px;
-  border-radius: 16px;
-  text-align: center;
-  width: 80%;
-  max-width: 320px;
-}
-
-.modal-content button {
-  margin-top: 20px;
-  padding: 12px;
-  width: 100%;
-  border-radius: 10px;
-}
-.goods img {
-  width: 100%;
-  max-width: 240px;
-  height: auto;
-}
-/* 굿즈 전체 레이아웃 */
-.section .goods {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #111;
-  border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 20px;
-}
-
-/* 굿즈 이미지 */
-.goods img {
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  border-radius: 14px;
-  margin-bottom: 12px;
-  background: #000;
-}
-
-/* 굿즈 텍스트 */
-.goods label {
-  width: 100%;
-  text-align: center;
-  font-size: 15px;
-  line-height: 1.4;
-}
-
-/* 셀렉트 & 인풋 */
-.goods select,
-.goods input[type="number"] {
-  width: 100%;
-  margin-top: 8px;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 15px;
-}
-@media (min-width: 769px) {
-  .section {
-    display: block;
+/* =====================
+   모바일 최적화
+===================== */
+@media (max-width: 480px) {
+  .logo {
+    max-width: 160px;
   }
 
-  .section .goods {
-    max-width: 420px;
-    margin: 0 auto 24px;
+  .section h2 {
+    font-size: 18px;
+  }
+
+  .section .goods img {
+    max-width: 100%;
   }
 }
-
-

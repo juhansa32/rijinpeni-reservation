@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>Rijinpeni Of Anniversary | 팬심 예매</title>
+  <title>Rijinpeni Of Anniversary | 예매 신청</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,23 +10,21 @@
 
 <header class="hero">
   <img src="images/logo.png" class="logo" />
-  <p class="date">2026. 02. 21. SAT 17:00</p>
+  <p class="date">2026.02.21 SAT 17:00</p>
   <p class="fan">본 페이지는 팬심으로 제작된 예매 신청 페이지입니다.</p>
 </header>
 
 <section class="section">
-  <h2>🎟️ 티켓 선택</h2>
+  <h2>🎟️ 티켓 예매</h2>
 
-  <label>
-    스탠딩 (50,000)
+  <label>스탠딩 (50,000원 / 1인 4매 제한)
     <select data-price="50000">
       <option value="0">0</option>
       <option>1</option><option>2</option><option>3</option><option>4</option>
     </select>
   </label>
 
-  <label>
-    좌석 (65,000)
+  <label>좌석 (65,000원 / 1인 4매 제한)
     <select data-price="65000">
       <option value="0">0</option>
       <option>1</option><option>2</option><option>3</option><option>4</option>
@@ -39,7 +37,7 @@
 
   <div class="goods">
     <img src="images/tshirt.jpg" />
-    <label>ANNIVERSARY 티셔츠 (50,000)
+    <label>ANNIVERSARY 티셔츠 (50,000원)
       <select data-price="50000">
         <option value="0">0</option>
         <option>1</option><option>2</option><option>3</option>
@@ -49,7 +47,7 @@
 
   <div class="goods">
     <img src="images/lightstick.jpg" />
-    <label>로그단 응원봉 (50,000)
+    <label>응원봉 (50,000원)
       <select data-price="50000">
         <option value="0">0</option>
         <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
@@ -57,33 +55,35 @@
     </label>
   </div>
 
-  <div class="goods">
+  <div class="goods sold">
     <img src="images/tote.jpg" />
-    <label>ANNIVERSARY 토트백 (25,000)
+    <span class="soldout">수량 한정</span>
+    <label>ANNIVERSARY 토트백 (25,000원)
       <select data-price="25000">
         <option value="0">0</option>
-        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        <option>1</option><option>2</option><option>3</option>
       </select>
     </label>
   </div>
 
   <div class="goods">
     <img src="images/step.jpg" />
-    <label>STEP 가챠 (5,000)
+    <label>STEP 가챠 (5,000원 / 현장 수령)
       <input type="number" min="0" value="0" data-price="5000">
     </label>
   </div>
 
   <div class="goods">
     <img src="images/forward.jpg" />
-    <label>FORWARD 가챠 (5,000)
+    <label>FORWARD 가챠 (5,000원 / 현장 수령)
       <input type="number" min="0" value="0" data-price="5000">
     </label>
   </div>
 
-  <div class="goods">
+  <div class="goods sold">
     <img src="images/poster.jpg" />
-    <label>A2 포스터 (50,000)
+    <span class="soldout">매진</span>
+    <label>A2 포스터 (50,000원)
       <input type="number" min="0" value="0" data-price="50000">
     </label>
   </div>
@@ -95,15 +95,39 @@
   <input type="tel" placeholder="휴대폰 번호 (010-0000-0000)" required />
 </section>
 
+<section class="section">
+  <h2>📄 예매 유의사항</h2>
+  <details>
+    <summary>내용 확인하기</summary>
+    <ul>
+      <li>본 페이지는 팬이 제작한 비공식 페이지입니다.</li>
+      <li>예매는 입금 확인 후 확정됩니다.</li>
+      <li>모든 티켓은 현장 수령입니다.</li>
+      <li>환불은 불가합니다.</li>
+    </ul>
+  </details>
+</section>
+
+<section class="section">
+  <h2>✅ 동의</h2>
+  <label>
+    <input type="checkbox" id="agree1" /> 환불 불가 정책에 동의합니다 (필수)
+  </label>
+  <label>
+    <input type="checkbox" id="agree2" /> 팬 제작 페이지임을 인지했습니다 (필수)
+  </label>
+</section>
+
 <section class="section total">
-  <h2>총 금액</h2>
+  <h2>🧾 신청 요약</h2>
+  <p id="summary">선택한 항목이 없습니다.</p>
   <p id="total">0 원</p>
   <button onclick="submitForm()">예매 신청하기</button>
 </section>
 
 <footer>
-  <p>⚠️ 환불 불가 / 입금 확인 후 확정</p>
-  <p>문의: dhtu716@naver.com</p>
+  <p>⚠️ 본 페이지는 실제 결제 기능이 없습니다.</p>
+  <p>문의 : dhtu716@naver.com</p>
 </footer>
 
 <script src="script.js"></script>

@@ -228,3 +228,60 @@ footer {
     max-width: 100%;
   }
 }
+/* 공연 소개 페이지 */
+.ticket-hero {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #000;
+}
+
+.ticket-poster {
+  width: 100%;
+  display: block;
+}
+
+.ticket-info {
+  padding: 20px;
+}
+
+.ticket-info h1 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.ticket-date,
+.ticket-place {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.ticket-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #00d564;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ticket-section {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  border-top: 1px solid #222;
+}
+
+.ticket-section h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.ticket-section ul {
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+}

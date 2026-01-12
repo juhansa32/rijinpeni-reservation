@@ -2,167 +2,83 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>2026 HUBOG CONCERT : RIJINPENI OF ANNIVERSARY</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIJINPENI LIVE 2026</title>
 
-  <!-- CSS -->
+  <!-- 기본 메타 -->
+  <meta name="description" content="RIJINPENI LIVE 공연 예매 페이지" />
+
+  <!-- 스타일 -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- 파비콘 -->
+  <link rel="icon" href="favicon.ico" />
 </head>
+
 <body>
 
-<!-- HERO / POSTER -->
-<header class="hero">
-  <img src="images/poster.jpg" alt="포스터" class="poster" />
+  <!-- 🎤 HERO / 포스터 -->
+  <section class="hero-poster">
+    <img src="images/poster.jpg" alt="RIJINPENI LIVE POSTER" />
+    <div class="poster-fade"></div>
+  </section>
 
-  <div class="hero-text">
-    <h1>RIJINPENI OF ANNIVERSARY</h1>
-    <p class="date">2026.02.21 (SAT) 17:00</p>
+  <!-- 🎵 공연 정보 -->
+  <section class="info">
+    <h1>RIJINPENI LIVE 2026</h1>
+    <p class="date">2026.03.15 (SUN) 18:00</p>
     <p class="place">웨스트브릿지 라이브홀</p>
-    <p class="fan">본 페이지는 팬심으로 제작된 공연 안내 페이지입니다.</p>
-  </div>
-</header>
+  </section>
 
-<!-- INFORMATION -->
-<section class="section">
-  <h2>INFORMATION</h2>
-  <ul class="info">
-    <li>관람 등급 : 만 7세 이상 관람가</li>
-    <li>관람 시간 : 약 120분</li>
-    <li>예매 방식 : 사전 예매 신청</li>
-    <li>입장 방식 : 현장 본인 확인 후 티켓 수령</li>
-  </ul>
-</section>
+  <!-- 🎶 세트리스트 미리보기 -->
+  <section class="section">
+    <h2>SETLIST PREVIEW</h2>
 
-<!-- LINE-UP -->
-<section class="section">
-  <h2>LINE-UP</h2>
-  <div class="lineup">
-    <div>Vocal</div>
-    <div>Guitar</div>
-    <div>Bass</div>
-    <div>Drums</div>
-    <div>Special Guest</div>
-  </div>
-</section>
+    <ul class="setlist">
+      <li>
+        <span>01. ryo - Melt</span>
+        <a href="https://www.youtube.com/watch?v=o1jAMSQyVPc" target="_blank">▶</a>
+      </li>
+      <li>
+        <span>02. 휴복 - 안티시티</span>
+        <a href="https://www.youtube.com/watch?v=F2_YweEwI7U" target="_blank">▶</a>
+      </li>
+      <li>
+        <span>03. 휴복 - 여름잔상</span>
+        <a href="https://www.youtube.com/watch?v=HtCuoRrG4Vw" target="_blank">▶</a>
+      </li>
+      <li>
+        <span>04. 달의하루 - 염라 (Cover)</span>
+        <a href="https://www.youtube.com/watch?v=fTwZNlF9K8E" target="_blank">▶</a>
+      </li>
+    </ul>
 
-<!-- SETLIST -->
-<section class="section">
-  <h2>SETLIST</h2>
-  <ol class="setlist">
-    <li>ryo - Melt</li>
-    <li>휴복 - 안티시티</li>
-    <li>휴복 - 여름잔상</li>
-    <li>달의하루 - 염라 (휴복 ver.)</li>
-    <li>Eve - 라스트댄스</li>
-    <li>요루시카 - 화성</li>
-    <li>후지이카제 - 청춘</li>
-    <li>요네즈 켄시 - IRIS OUT (휴복 ver.)</li>
-    <li>SPYAIR - 사무라이하트</li>
-    <li>휴복 - 지하철 도난 사건</li>
-    <li>Vaundy - 벌거벗은 용사</li>
-    <li>Mrs. Green Apple - familie</li>
-    <li>쿠스시키 (휴복 ver.)</li>
-    <li>망상감상대상연맹 (휴복 ver.)</li>
-    <li>Good Day (휴복 ver.)</li>
-    <li>Official髭男dism - TATTOO</li>
-    <li>라일락 (휴복 ver.)</li>
-    <li>Blessing (KOREA EDITION)</li>
-  </ol>
+    <p class="setlist-note">※ 재생 버튼 클릭 시 유튜브로 이동합니다.</p>
+  </section>
 
-  <p class="notice">
-    ※ 곡 제목을 클릭하면 하이라이트 영상이 새 창에서 재생됩니다.
-  </p>
-</section>
-
-<!-- MD -->
-<section class="section">
-  <h2>MD</h2>
-  <div class="md">
-    <div>
-      <img src="images/tshirt.jpg" alt="티셔츠">
-      <p>ANNIVERSARY 티셔츠</p>
-    </div>
-    <div>
-      <img src="images/lightstick.jpg" alt="응원봉">
-      <p>응원봉</p>
-    </div>
-    <div>
-      <img src="images/tote.jpg" alt="토트백">
-      <p>ANNIVERSARY 토트백</p>
-    </div>
-    <div>
-      <img src="images/poster_md.jpg" alt="포스터">
-      <p>A2 포스터</p>
-    </div>
-  </div>
-</section>
-
-<!-- LOCATION -->
-<section class="section">
-  <h2>LOCATION</h2>
-  <p><strong>웨스트브릿지 라이브홀</strong></p>
-
-  <img src="images/map.png" alt="지도" class="map" />
-
-  <div class="transport">
-    <h3>지하철</h3>
-    <p>2호선 / 공항철도 / 경의중앙선 홍대입구역 8번 출구</p>
-
-    <h3>버스</h3>
+  <!-- 🗺️ 오시는 길 -->
+  <section class="section">
+    <h2>LOCATION</h2>
     <p>
-      지선: 5712, 5714, 6713, 6716, 7016, 7612, 7711, 7737, 7739<br>
-      간선: 271, 273, 602, 603, 604, 761, 921<br>
-      공항: 6002
+      지하철: 2호선 / 공항철도 / 경의중앙선<br />
+      홍대입구역 8번 출구
     </p>
-
     <p class="notice">
-      ※ 주차 불가 / 대중교통 이용 권장
+      주차 불가 · 대중교통 이용 권장
     </p>
+  </section>
+
+  <!-- 🎟️ 예매 버튼 -->
+  <div class="fixed-reserve">
+    <a href="reservation.html" class="reserve-btn">
+      예매하러 가기
+    </a>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <p>본 페이지는 팬심으로 제작된 비공식 공연 안내 페이지입니다.</p>
-</footer>
-
-<!-- FIXED CTA -->
-<a href="https://juhansa32.github.io/rijinpeni-reservation/" class="cta">
-  예매하러 가기
-</a>
-
-<!-- SETLIST SCRIPT -->
-<script>
-const links = {
-  1: "https://www.youtube.com/watch?v=o1jAMSQyVPc",
-  2: "https://www.youtube.com/watch?v=F2_YweEwI7U",
-  3: "https://www.youtube.com/watch?v=HtCuoRrG4Vw",
-  4: "https://www.youtube.com/watch?v=fTwZNlF9K8E",
-  5: "https://www.youtube.com/watch?v=CLdeykXCZX4",
-  6: "https://www.youtube.com/watch?v=6ufUm9q5onA",
-  7: "https://www.youtube.com/watch?v=IBpZER_08iI",
-  8: "https://www.youtube.com/watch?v=72PQWFP9Oj4",
-  9: "https://www.youtube.com/watch?v=wGghaZ1-GqQ",
-  10: "https://www.youtube.com/watch?v=KmP7ILt1oAg",
-  11: "https://www.youtube.com/watch?v=u7zD3MHOqCM",
-  12: "https://www.youtube.com/watch?v=FYhxYcXfhYA",
-  13: "https://www.youtube.com/watch?v=RYSDMJSFPXs",
-  14: "https://www.youtube.com/watch?v=I3kd3M2IRu4",
-  15: "https://www.youtube.com/watch?v=3wyo65YC5nQ",
-  16: "https://www.youtube.com/watch?v=Var9VKC5gm8",
-  17: "https://www.youtube.com/watch?v=aTxn1X7_sXc",
-  18: "https://www.youtube.com/watch?v=5NI0VJdJAAQ"
-};
-
-document.querySelectorAll(".setlist li").forEach((item, index) => {
-  item.addEventListener("click", () => {
-    const num = index + 1;
-    if (links[num]) {
-      window.open(links[num], "_blank");
-    }
-  });
-});
-</script>
+  <footer>
+    <p>ⓒ RIJINPENI LIVE. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
+

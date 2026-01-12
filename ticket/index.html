@@ -1,45 +1,145 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>예매하기 | RIJINPENI</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>TICKET & MD | Rijinpeni Of Anniversary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="hero-sub">
-<img src="images/logo.png" class="logo">
-<p class="fan">예매 신청 페이지</p>
+<!-- 상단 히어로 -->
+<header class="hero">
+  <img src="../images/logo.png" class="logo" alt="Rijinpeni Of Anniversary" />
+  <p class="date">2026.02.21 SAT 17:00</p>
+  <p class="fan">본 페이지는 팬심으로 제작된 예매 신청 페이지입니다.</p>
 </header>
 
-<section class="section">
-<h2>🎟 티켓 선택</h2>
-<label>스탠딩 (50,000원)
-<select>
-<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
-</select>
-</label>
-
-<label>좌석 (65,000원)
-<select>
-<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
-</select>
-</label>
+<!-- 안내 문구 -->
+<section class="section notice">
+  <p>
+    본 페이지는 실제 결제가 이루어지지 않는 예매 신청 페이지입니다.<br />
+    예매 마감 후, 입금 안내는 개별적으로 진행됩니다.
+  </p>
 </section>
 
+<!-- 🎟️ 티켓 -->
 <section class="section">
-<h2>🙋 신청자 정보</h2>
-<input type="text" placeholder="이름">
-<input type="tel" placeholder="휴대폰 번호">
+  <h2>🎟️ TICKET</h2>
+
+  <label>
+    스탠딩 (50,000원 / 1인 4매 제한)
+    <select data-name="스탠딩" data-price="50000">
+      <option value="0">0</option>
+      <option>1</option><option>2</option><option>3</option><option>4</option>
+    </select>
+  </label>
+
+  <label>
+    좌석 (65,000원 / 1인 4매 제한)
+    <select data-name="좌석" data-price="65000">
+      <option value="0">0</option>
+      <option>1</option><option>2</option><option>3</option><option>4</option>
+    </select>
+  </label>
 </section>
 
+<!-- 🛍️ 굿즈 -->
+<section class="section">
+  <h2>🛍️ MD</h2>
+
+  <div class="goods">
+    <img src="../images/tshirt.jpg" alt="티셔츠">
+    <label>
+      ANNIVERSARY 티셔츠 (50,000원)
+      <select data-name="티셔츠" data-price="50000">
+        <option value="0">0</option>
+        <option>1</option><option>2</option><option>3</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="goods">
+    <img src="../images/lightstick.jpg" alt="응원봉">
+    <label>
+      응원봉 (50,000원)
+      <select data-name="응원봉" data-price="50000">
+        <option value="0">0</option>
+        <option>1</option><option>2</option><option>3</option><option>4</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="goods">
+    <img src="../images/tote.jpg" alt="토트백">
+    <label>
+      ANNIVERSARY 토트백 (25,000원)
+      <select data-name="토트백" data-price="25000">
+        <option value="0">0</option>
+        <option>1</option><option>2</option><option>3</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="goods">
+    <img src="../images/step.jpg" alt="STEP 가챠">
+    <label>
+      STEP 가챠 (5,000원 / 현장 수령)
+      <input type="number" min="0" value="0" data-name="STEP 가챠" data-price="5000">
+    </label>
+  </div>
+
+  <div class="goods">
+    <img src="../images/forward.jpg" alt="FORWARD 가챠">
+    <label>
+      FORWARD 가챠 (5,000원 / 현장 수령)
+      <input type="number" min="0" value="0" data-name="FORWARD 가챠" data-price="5000">
+    </label>
+  </div>
+</section>
+
+<!-- 🙋 신청자 정보 -->
+<section class="section">
+  <h2>🙋 신청자 정보</h2>
+  <input type="text" id="name" placeholder="이름" required />
+  <input type="tel" id="phone" placeholder="휴대폰 번호 (010-0000-0000)" required />
+</section>
+
+<!-- 🧭 예매 절차 -->
+<section class="section">
+  <h2>🧭 예매 절차 안내</h2>
+  <ol class="process">
+    <li>본 페이지를 통해 예매 신청을 접수합니다.</li>
+    <li>예매 마감 후 신청자에 한해 입금 안내가 개별 발송됩니다.</li>
+    <li>입금 확인 후 예매가 최종 확정됩니다.</li>
+    <li>좌석은 입금 순으로 배정되며 선택은 불가합니다.</li>
+    <li>티켓은 공연 당일 현장에서 본인 확인 후 수령합니다.</li>
+  </ol>
+</section>
+
+<!-- ✅ 동의 -->
+<section class="section">
+  <h2>✅ 동의</h2>
+  <label>
+    <input type="checkbox" id="agree1"> 환불 불가 정책에 동의합니다 (필수)
+  </label>
+  <label>
+    <input type="checkbox" id="agree2"> 팬 제작 페이지임을 인지했습니다 (필수)
+  </label>
+</section>
+
+<!-- 🧾 요약 -->
 <section class="section total">
-<button onclick="submitForm()">예매 신청</button>
+  <h2>🧾 신청 요약</h2>
+  <p id="summary">선택한 항목이 없습니다.</p>
+  <p id="total">0 원</p>
+  <button onclick="submitForm()">예매 신청하기</button>
 </section>
 
 <footer>
-<p>입금 안내는 문자로 발송됩니다.</p>
+  <p>⚠️ 본 페이지는 실제 결제 기능이 없습니다.</p>
+  <p>문의 : dhtu716@naver.com</p>
 </footer>
 
 <script src="script.js"></script>

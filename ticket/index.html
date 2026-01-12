@@ -1,147 +1,284 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>TICKET & MD | Rijinpeni Of Anniversary</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="../favicon.ico" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<title>TICKET & OFFICIAL MD | Rijinpeni Anniversary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../favicon.ico">
+
+<style>
+body{
+  margin:0;
+  background:#0e0e0e;
+  color:#fff;
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif;
+}
+
+/* HEADER */
+.header{
+  padding:24px 20px;
+  text-align:center;
+  border-bottom:1px solid #1f1f1f;
+}
+.header h1{
+  font-size:20px;
+  margin:0 0 6px;
+}
+.header p{
+  font-size:13px;
+  opacity:.7;
+}
+
+/* MODE SELECT */
+.mode{
+  display:flex;
+  gap:12px;
+  padding:20px;
+}
+.mode button{
+  flex:1;
+  padding:16px;
+  background:#1a1a1a;
+  border:1px solid #333;
+  color:#fff;
+  border-radius:12px;
+  font-size:15px;
+  cursor:pointer;
+}
+.mode button.active{
+  background:#fff;
+  color:#000;
+  font-weight:bold;
+}
+
+/* SECTION */
+.section{
+  padding:28px 20px;
+  border-top:1px solid #1f1f1f;
+}
+.section h2{
+  font-size:18px;
+  margin-bottom:16px;
+}
+
+/* TICKET */
+.ticket-box{
+  background:#111;
+  padding:18px;
+  border-radius:14px;
+}
+.ticket-box label{
+  display:block;
+  margin-bottom:14px;
+  font-size:14px;
+}
+select{
+  width:100%;
+  padding:12px;
+  background:#1a1a1a;
+  border:1px solid #333;
+  color:#fff;
+  border-radius:10px;
+}
+
+/* MD GRID */
+.md-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+.md-item{
+  background:#111;
+  border-radius:16px;
+  padding:14px;
+  text-align:center;
+}
+.md-item img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:10px;
+}
+.md-item h3{
+  font-size:14px;
+  margin:4px 0;
+}
+.md-item p{
+  font-size:13px;
+  opacity:.8;
+}
+.md-item select,
+.md-item input{
+  width:100%;
+  margin-top:8px;
+  padding:10px;
+  background:#1a1a1a;
+  border:1px solid #333;
+  color:#fff;
+  border-radius:10px;
+}
+
+/* TOTAL */
+.total{
+  background:#151515;
+  padding:24px 20px;
+}
+#summary{
+  white-space:pre-line;
+  font-size:14px;
+  margin-bottom:10px;
+}
+#total{
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:16px;
+}
+
+/* BUTTON */
+.submit{
+  width:100%;
+  padding:16px;
+  font-size:17px;
+  font-weight:bold;
+  background:#fff;
+  color:#000;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  padding:30px 20px;
+  text-align:center;
+  font-size:12px;
+  opacity:.6;
+}
+</style>
 </head>
+
 <body>
 
-<!-- 상단 히어로 -->
-<header class="hero">
-  <img src="../images/logo.png" class="logo" alt="Rijinpeni Of Anniversary" />
-  <p class="date">2026.02.21 SAT 17:00</p>
-  <p class="fan">본 페이지는 팬심으로 제작된 예매 신청 페이지입니다.</p>
-</header>
+<div class="header">
+  <h1>TICKET & OFFICIAL MD</h1>
+  <p>Rijinpeni Of Anniversary</p>
+</div>
 
-<!-- 안내 문구 -->
-<section class="section notice">
-  <p>
-    본 페이지는 실제 결제가 이루어지지 않는 예매 신청 페이지입니다.<br />
-    예매 마감 후, 입금 안내는 개별적으로 진행됩니다.
-  </p>
-</section>
+<!-- MODE SELECT -->
+<div class="mode">
+  <button class="active" onclick="setMode('ticket')">🎟 티켓 + 굿즈</button>
+  <button onclick="setMode('md')">🛍 굿즈만 구매</button>
+</div>
 
-<!-- 🎟️ 티켓 -->
-<section class="section">
-  <h2>🎟️ TICKET</h2>
-
-  <label>
-    스탠딩 (50,000원 / 1인 4매 제한)
-    <select data-name="스탠딩" data-price="50000">
-      <option value="0">0</option>
-      <option>1</option><option>2</option><option>3</option><option>4</option>
-    </select>
-  </label>
-
-  <label>
-    좌석 (65,000원 / 1인 4매 제한)
-    <select data-name="좌석" data-price="65000">
-      <option value="0">0</option>
-      <option>1</option><option>2</option><option>3</option><option>4</option>
-    </select>
-  </label>
-</section>
-
-<!-- 🛍️ 굿즈 -->
-<section class="section">
-  <h2>🛍️ MD</h2>
-
-  <div class="goods">
-    <img src="../images/tshirt.jpg" alt="티셔츠">
-    <label>
-      ANNIVERSARY 티셔츠 (50,000원)
-      <select data-name="티셔츠" data-price="50000">
-        <option value="0">0</option>
-        <option>1</option><option>2</option><option>3</option>
+<!-- TICKET -->
+<div id="ticketSection" class="section">
+  <h2>🎟 티켓 예매</h2>
+  <div class="ticket-box">
+    <label>스탠딩 (50,000원 / 1인 4매)
+      <select data-price="50000">
+        <option value="0">0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+      </select>
+    </label>
+    <label>좌석 (65,000원 / 1인 4매)
+      <select data-price="65000">
+        <option value="0">0</option><option>1</option><option>2</option><option>3</option><option>4</option>
       </select>
     </label>
   </div>
+</div>
 
-  <div class="goods">
-    <img src="../images/lightstick.jpg" alt="응원봉">
-    <label>
-      응원봉 (50,000원)
-      <select data-name="응원봉" data-price="50000">
-        <option value="0">0</option>
-        <option>1</option><option>2</option><option>3</option><option>4</option>
-      </select>
-    </label>
+<!-- MD -->
+<div class="section">
+  <h2>🛍 OFFICIAL MD</h2>
+
+  <div class="md-grid">
+    <div class="md-item">
+      <img src="../images/tshirt.jpg">
+      <h3>ANNIVERSARY T-SHIRT</h3>
+      <p>50,000원</p>
+      <select data-price="50000"><option value="0">0</option><option>1</option><option>2</option><option>3</option></select>
+    </div>
+
+    <div class="md-item">
+      <img src="../images/tote.jpg">
+      <h3>ANNIVERSARY TOTE BAG</h3>
+      <p>25,000원</p>
+      <select data-price="25000"><option value="0">0</option><option>1</option><option>2</option></select>
+    </div>
+
+    <div class="md-item">
+      <img src="../images/lightstick.jpg">
+      <h3>LIGHT STICK</h3>
+      <p>50,000원</p>
+      <select data-price="50000"><option value="0">0</option><option>1</option><option>2</option><option>3</option></select>
+    </div>
+
+    <div class="md-item">
+      <img src="../images/step.jpg">
+      <h3>STEP GACHA</h3>
+      <p>5,000원</p>
+      <input type="number" min="0" value="0" data-price="5000">
+    </div>
+
+    <div class="md-item">
+      <img src="../images/forward.jpg">
+      <h3>FORWARD GACHA</h3>
+      <p>5,000원</p>
+      <input type="number" min="0" value="0" data-price="5000">
+    </div>
   </div>
+</div>
 
-  <div class="goods">
-    <img src="../images/tote.jpg" alt="토트백">
-    <label>
-      ANNIVERSARY 토트백 (25,000원)
-      <select data-name="토트백" data-price="25000">
-        <option value="0">0</option>
-        <option>1</option><option>2</option><option>3</option>
-      </select>
-    </label>
-  </div>
-
-  <div class="goods">
-    <img src="../images/step.jpg" alt="STEP 가챠">
-    <label>
-      STEP 가챠 (5,000원 / 현장 수령)
-      <input type="number" min="0" value="0" data-name="STEP 가챠" data-price="5000">
-    </label>
-  </div>
-
-  <div class="goods">
-    <img src="../images/forward.jpg" alt="FORWARD 가챠">
-    <label>
-      FORWARD 가챠 (5,000원 / 현장 수령)
-      <input type="number" min="0" value="0" data-name="FORWARD 가챠" data-price="5000">
-    </label>
-  </div>
-</section>
-
-<!-- 🙋 신청자 정보 -->
-<section class="section">
-  <h2>🙋 신청자 정보</h2>
-  <input type="text" id="name" placeholder="이름" required />
-  <input type="tel" id="phone" placeholder="휴대폰 번호 (010-0000-0000)" required />
-</section>
-
-<!-- 🧭 예매 절차 -->
-<section class="section">
-  <h2>🧭 예매 절차 안내</h2>
-  <ol class="process">
-    <li>본 페이지를 통해 예매 신청을 접수합니다.</li>
-    <li>예매 마감 후 신청자에 한해 입금 안내가 개별 발송됩니다.</li>
-    <li>입금 확인 후 예매가 최종 확정됩니다.</li>
-    <li>좌석은 입금 순으로 배정되며 선택은 불가합니다.</li>
-    <li>티켓은 공연 당일 현장에서 본인 확인 후 수령합니다.</li>
-  </ol>
-</section>
-
-<!-- ✅ 동의 -->
-<section class="section">
-  <h2>✅ 동의</h2>
-  <label>
-    <input type="checkbox" id="agree1"> 환불 불가 정책에 동의합니다 (필수)
-  </label>
-  <label>
-    <input type="checkbox" id="agree2"> 팬 제작 페이지임을 인지했습니다 (필수)
-  </label>
-</section>
-
-<!-- 🧾 요약 -->
-<section class="section total">
-  <h2>🧾 신청 요약</h2>
-  <p id="summary">선택한 항목이 없습니다.</p>
-  <p id="total">0 원</p>
-  <button onclick="submitForm()">예매 신청하기</button>
-</section>
+<!-- TOTAL -->
+<div class="total">
+  <div id="summary">선택한 항목이 없습니다.</div>
+  <div id="total">0 원</div>
+  <button class="submit" onclick="submitOrder()">신청하기</button>
+</div>
 
 <footer>
-  <p>⚠️ 본 페이지는 실제 결제 기능이 없습니다.</p>
-  <p>문의 : dhtu716@naver.com</p>
+ⓒ Rijinpeni Anniversary Fan Project<br>
+본 페이지는 팬 제작 예매/MD 신청 페이지입니다.
 </footer>
 
-<script src="script.js"></script>
+<script>
+let mode = "ticket";
+
+function setMode(m){
+  mode = m;
+  document.getElementById("ticketSection").style.display =
+    m === "ticket" ? "block" : "none";
+
+  document.querySelectorAll(".mode button").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+
+document.querySelectorAll("select,input").forEach(el=>{
+  el.addEventListener("change", calc);
+});
+
+function calc(){
+  let sum = 0;
+  let text = "";
+
+  document.querySelectorAll("[data-price]").forEach(el=>{
+    let qty = el.value || 0;
+    let price = el.dataset.price;
+    if(qty > 0){
+      sum += qty * price;
+      text += `${qty} × ${price.toLocaleString()}원\n`;
+    }
+  });
+
+  document.getElementById("summary").innerText =
+    text || "선택한 항목이 없습니다.";
+  document.getElementById("total").innerText =
+    sum.toLocaleString() + " 원";
+}
+
+function submitOrder(){
+  alert("예매/굿즈 신청이 접수되었습니다.\n※ 본 페이지는 결제 기능이 없습니다.");
+}
+</script>
+
 </body>
 </html>

@@ -1,95 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap');
+
 * {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
 }
 
 body {
   margin: 0;
-  background: #0e0e0e;
-  color: #fff;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #e6e6e6;
+  font-family: 'Noto Serif KR', serif;
+  line-height: 1.7;
 }
 
-/* 포스터 */
-.poster-wrap {
-  position: relative;
-}
-
-.poster-wrap img {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-}
-
-.poster-blur {
-  position: absolute;
-  bottom: 0;
-  height: 120px;
-  width: 100%;
-  background: linear-gradient(transparent, #0e0e0e);
-}
-
-/* 공연 정보 */
-.info {
+/* ===== HERO ===== */
+.hero {
   text-align: center;
-  padding: 20px;
+  padding: 80px 20px 60px;
+  background: linear-gradient(to bottom, rgba(80,0,0,0.35), rgba(0,0,0,0.95));
 }
 
-.date { opacity: 0.8; }
-.place { opacity: 0.6; }
+.logo {
+  max-width: 260px;
+  margin-bottom: 20px;
+}
 
-/* 섹션 */
+.date {
+  color: #c40000;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.fan {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 8px;
+}
+
+/* ===== SECTION ===== */
 .section {
-  padding: 20px;
-  border-bottom: 1px solid #222;
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-h2 {
-  font-size: 18px;
-  margin-bottom: 12px;
+.section h2 {
+  text-align: center;
+  color: #c40000;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
-/* 세트리스트 */
-.setlist {
-  list-style: none;
-  padding: 0;
+/* ===== NOTICE ===== */
+.notice {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bbb;
 }
 
-.setlist li {
+/* ===== FORM ===== */
+label {
+  display: block;
+  margin-bottom: 18px;
+}
+
+select,
+input[type="number"],
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  background: #111;
+  border: 1px solid #333;
+  color: #eee;
+  font-size: 0.95rem;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+/* ===== GOODS ===== */
+.goods {
   display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #1c1c1c;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-.setlist a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* 고정 버튼 */
-.fixed-bar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+.goods img {
+  width: 90px;
+  border: 1px solid #400;
   background: #000;
-  padding: 12px;
 }
 
-.reserve-btn,
+/* ===== PROCESS ===== */
+.process {
+  padding-left: 20px;
+  color: #ccc;
+}
+
+.process li {
+  margin-bottom: 10px;
+}
+
+/* ===== CHECKBOX ===== */
+.section input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* ===== TOTAL ===== */
+.total {
+  border-top: 1px solid #400;
+  padding-top: 40px;
+  text-align: center;
+}
+
+#summary {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+#total {
+  font-size: 1.6rem;
+  color: #ff2a2a;
+  margin-bottom: 30px;
+}
+
+/* ===== BUTTON ===== */
 button {
-  width: 100%;
-  padding: 16px;
-  background: #fff;
-  color: #000;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 12px;
-  border: none;
+  background: transparent;
+  color: #ff2a2a;
+  border: 1px solid #ff2a2a;
+  padding: 14px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+button:hover {
+  background: #ff2a2a;
+  color: #000;
+  box-shadow: 0 0 18px rgba(255, 40, 40, 0.7);
+}
+
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 40px 0 80px;
-  font-size: 12px;
-  opacity: 0.6;
+  font-size: 0.75rem;
+  color: #666;
+  padding: 50px 20px 80px;
 }

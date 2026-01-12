@@ -1,63 +1,204 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>RIJINPENI OF ANNIVERSARY</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Rijinpeni Of Anniversary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    body {
+      margin: 0;
+      background: #0e0e0e;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: url("hero-poster.jpg") center top / cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 40px;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, #0e0e0e 90%);
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .hero-content img {
+      width: 160px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .info p {
+      font-size: 15px;
+      opacity: 0.85;
+      margin: 6px 0;
+    }
+
+    /* SETLIST */
+    .setlist {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .setlist a {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.85;
+    }
+
+    .setlist a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* MD preview */
+    .md-preview {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .md-preview img {
+      width: 140px;
+      border-radius: 12px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #fff;
+      color: #000;
+      display: inline-block;
+      padding: 16px 36px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 30px;
+    }
+
+    footer {
+      padding: 40px 20px;
+      font-size: 12px;
+      opacity: 0.6;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="hero-main">
-  <img src="images/hero.jpg" class="hero-img" alt="RIJINPENI">
-  <div class="hero-overlay">
-    <img src="images/logo.png" class="logo">
-    <p class="date">2026.02.21 SAT 17:00</p>
-    <p class="venue">웨스트브릿지 라이브홀</p>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <img src="images/logo.png" alt="logo" />
+      <p>2026.02.21 SAT 17:00<br>WEST BRIDGE LIVE HALL</p>
+    </div>
   </div>
-</header>
 
-<section class="section center">
-  <a href="reserve.html" class="main-btn">🎟 예매하기</a>
-  <a href="goods.html" class="sub-btn">🛍 굿즈 구매</a>
+  <!-- INFO -->
+  <section class="info">
+    <h2>INFORMATION</h2>
+    <p>Rijinpeni Of Anniversary</p>
+    <p>2026년 2월 21일 (토) 17:00</p>
+    <p>웨스트브릿지 라이브홀</p>
+  </section>
+
+  <!-- SETLIST -->
+ <section id="setlist">
+  <h2>SET LIST</h2>
+
+  <ul class="setlist-short">
+    <li>01. ryo – Melt </li>
+    <li>02. 휴복 – 안티시티 </li>
+    <li>03. 휴복 – 여름잔상 </li>
+    <li>04. 달의하루-염라 </li>
+  </ul>
+
+  <ul class="setlist-full" style="display:none;">
+    <li>05. Eve – 라스트댄스</li>
+    <li>06. 요루시카 – 화성</li>
+    <li>07. 후지이 카제 – 청춘</li>
+    <li>08. 요네즈 켄시 – IRIS OUT</li>
+    <li>09. SPYAIR – 사무라이 하트</li>
+    <li>10. 휴복 – 지하철 도난 사건</li>
+    <li>11. Vaundy – 벌거벗은 용사</li>
+    <li>12. Mrs. GREEN APPLE – Familie</li>
+    <li>13. Mrs. GREEN APPLE – 쿠스시키 </li>
+    <li>14. DECO*27 – 망상감상대상연맹 (휴복 ver.)</li>
+    <li>15. Mrs. GREEN APPLE – Good Day (휴복 ver.)</li>
+    <li>16. Official髭男dism – TATTOO</li>
+    <li>17. Mrs. GREEN APPLE – 라일락 (KR / 휴복 ver.)</li>
+    <li>18. 하루요시 – Blessing (KOREA EDITION)</li>
+    <li>미공개곡 2곡<li>
+  </ul>
+
+  <button id="toggleSetlist" class="setlist-btn">
+    SET LIST 전체 보기 ▼
+  </button>
 </section>
 
-<section class="section">
-<h2>🎵 SET LIST</h2>
-<ol class="setlist">
-<li>ryo - Melt</li>
-<li>휴복 - 안티시티</li>
-<li>휴복 - 여름잔상</li>
-<li>달의하루 - 염라 (휴복 ver)</li>
-<li>Eve - 라스트댄스</li>
-<li>요루시카 - 화성</li>
-<li>후지이카제 - 청춘</li>
-<li>요네즈 켄시 - IRIS OUT (휴복 ver)</li>
-<li>SPYAIR - 사무라이하트</li>
-<li>휴복 - 지하철 도난 사건</li>
-<li>Vaundy - 벌거벗은 용사</li>
-<li>Mrs. Green Apple - familie</li>
-<li>Mrs. Green Apple - 쿠스시키 (휴복 ver)</li>
-<li>DECO*27 - 망상감상대상연맹 (휴복 ver)</li>
-<li>Mrs. Green Apple - Good Day (휴복 ver)</li>
-<li>Official Hige Dandism - TATTOO</li>
-<li>Mrs. Green Apple - 라일락 (휴복 ver)</li>
-<li>하루요시 - Blessing</li>
-</ol>
-</section>
 
-<section class="section">
-<h2>📍 LOCATION</h2>
-<p>
-2호선 · 공항철도 · 경의중앙선<br>
-홍대입구역 8번 출구<br><br>
-주차 불가 / 대중교통 이용 권장
-</p>
-</section>
+  <!-- MD -->
+  <section>
+    <h2>OFFICIAL MD</h2>
+    <div class="md-preview">
+      <img src="images/tshirt.jpg">
+      <img src="images/tote.jpg">
+      <img src="images/lightstick.jpg">
+    </div>
 
-<footer>
-<p>본 페이지는 팬심으로 제작된 비공식 홈페이지입니다.</p>
-</footer>
+    <a class="cta" href="ticket/index.html">
+      TICKET & MD
+    </a>
+  </section>
+
+  <!-- LOCATION -->
+  <section>
+    <h2>LOCATION</h2>
+    <img src="images/map.png" style="width:100%;max-width:500px;border-radius:12px;">
+    <p style="font-size:13px;opacity:0.7;margin-top:10px;">
+      홍대입구역 8번 출구 도보 이동
+    </p>
+  </section>
+
+  <footer>
+    ⓒ Rijinpeni Anniversary Fan Project<br>
+    본 사이트는 팬 제작 페이지입니다.
+  </footer>
 
 </body>
 </html>

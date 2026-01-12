@@ -1,287 +1,177 @@
-/* =====================
-   기본 설정
-===================== */
+/* RESET */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
 }
 
 body {
-  margin: 0;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
   background: #0e0e0e;
   color: #ffffff;
   line-height: 1.6;
 }
 
-/* =====================
-   헤더
-===================== */
+/* HERO */
 .hero {
+  position: relative;
   text-align: center;
-  padding: 48px 20px 36px;
-  background: radial-gradient(circle at top, #1b1b1b, #0e0e0e);
 }
 
-.logo {
-  max-width: 200px;
-  margin-bottom: 16px;
+.poster {
+  width: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+  filter: brightness(0.7);
 }
 
-.date {
-  font-size: 15px;
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #0e0e0e);
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.date, .place {
+  font-size: 1.1rem;
   opacity: 0.9;
 }
 
 .fan {
-  font-size: 13px;
+  font-size: 0.8rem;
   opacity: 0.6;
+  margin-top: 8px;
 }
 
-/* =====================
-   섹션 공통
-===================== */
+/* SECTION */
 .section {
-  padding: 32px 20px;
-  border-bottom: 1px solid #1f1f1f;
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .section h2 {
-  margin-bottom: 18px;
-  font-size: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  border-left: 4px solid #ff3c78;
+  padding-left: 12px;
 }
 
-/* =====================
-   입력 요소
-===================== */
-label {
-  display: block;
-  margin-bottom: 16px;
-  font-size: 14px;
-}
-
-select,
-input[type="number"],
-input[type="text"],
-input[type="tel"] {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  background: #1a1a1a;
-  border: 1px solid #333;
-  color: #fff;
-  border-radius: 10px;
-  font-size: 15px;
-}
-
-/* =====================
-   굿즈 카드 (핵심)
-===================== */
-.section .goods {
-  background: #111;
-  border-radius: 18px;
-  padding: 20px;
-  margin: 0 auto 28px;
-  max-width: 420px;
-  text-align: center;
-}
-
-.section .goods img {
-  width: 100%;
-  max-width: 300px;   /* PC에서도 크게 */
-  height: auto;
-  border-radius: 16px;
-  margin-bottom: 14px;
-  background: #000;
-}
-
-.section .goods label {
-  font-size: 15px;
-  line-height: 1.4;
-}
-
-.goods select,
-.goods input[type="number"] {
-  margin-top: 10px;
-}
-
-/* 매진 상태 */
-.goods.sold {
-  opacity: 0.5;
-  position: relative;
-}
-
-.soldout {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: #b00020;
-  color: #fff;
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 8px;
-}
-
-/* =====================
-   예매 절차
-===================== */
-.process {
-  padding-left: 20px;
-}
-
-.process li {
+/* INFO */
+.info li {
   margin-bottom: 10px;
-  font-size: 14px;
+  opacity: 0.9;
 }
 
-/* =====================
-   동의
-===================== */
-.section input[type="checkbox"] {
-  margin-right: 8px;
+/* LINEUP */
+.lineup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
 }
 
-/* =====================
-   신청 요약
-===================== */
-.total {
-  background: #151515;
-}
-
-#summary {
-  white-space: pre-line;
-  margin-bottom: 12px;
-}
-
-#total {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 22px;
-}
-
-/* =====================
-   버튼
-===================== */
-button {
-  width: 100%;
-  padding: 16px;
-  background: #ffffff;
-  color: #000;
-  font-size: 17px;
-  font-weight: bold;
-  border: none;
-  border-radius: 14px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #e5e5e5;
-}
-
-/* =====================
-   푸터
-===================== */
-footer {
+.lineup div {
+  background: #1b1b1b;
+  padding: 20px;
   text-align: center;
-  padding: 28px 18px 50px;
-  font-size: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* SETLIST */
+.setlist li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.setlist li:hover {
+  color: #ff3c78;
+}
+
+.notice {
+  margin-top: 15px;
+  font-size: 0.85rem;
   opacity: 0.6;
 }
 
-/* =====================
-   PC 전용 레이아웃 강화
-===================== */
-@media (min-width: 1024px) {
-  .section {
-    max-width: 980px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    max-width: 240px;
-  }
-
-  .section h2 {
-    font-size: 22px;
-  }
-
-  /* 굿즈 2열 그리드 */
-  .goods-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-  }
+/* MD */
+.md {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
 }
 
-/* =====================
-   모바일 최적화
-===================== */
-@media (max-width: 480px) {
-  .logo {
-    max-width: 160px;
-  }
-
-  .section h2 {
-    font-size: 18px;
-  }
-
-  .section .goods img {
-    max-width: 100%;
-  }
-}
-/* 공연 소개 페이지 */
-.ticket-hero {
-  max-width: 480px;
-  margin: 0 auto;
-  background: #000;
-}
-
-.ticket-poster {
+.md img {
   width: 100%;
-  display: block;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
-.ticket-info {
-  padding: 20px;
+.md img:hover {
+  transform: scale(1.05);
 }
 
-.ticket-info h1 {
-  font-size: 22px;
-  margin-bottom: 6px;
+.md p {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
-.ticket-date,
-.ticket-place {
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-.ticket-btn {
-  margin-top: 16px;
+/* LOCATION */
+.map {
   width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: bold;
-  background: #00d564;
-  color: #000;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 12px;
+  margin: 25px 0;
 }
 
-.ticket-section {
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 20px;
-  border-top: 1px solid #222;
+.transport h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
-.ticket-section h2 {
-  font-size: 18px;
-  margin-bottom: 12px;
+/* CTA */
+.cta {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff3c78;
+  color: #fff;
+  padding: 15px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(255,60,120,0.4);
+  z-index: 100;
 }
 
-.ticket-section ul {
-  padding-left: 16px;
-  font-size: 14px;
-  line-height: 1.7;
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 0 120px;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
 }

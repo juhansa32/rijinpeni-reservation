@@ -216,3 +216,65 @@ footer {
     padding: 16px 0;
   }
 }
+/* 교통 안내 */
+.transport {
+  background: #0f0f0f;
+}
+
+.transport h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.venue {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.map-box {
+  margin-bottom: 20px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.map-box img {
+  width: 100%;
+  display: block;
+}
+
+.transport-info h3 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #e63946;
+}
+
+.transport-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.transport-info .bus {
+  margin-top: 6px;
+}
+
+.transport-info .bus span {
+  display: inline-block;
+  min-width: 46px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.transport-info .warning {
+  margin-top: 18px;
+  padding: 14px;
+  background: rgba(230,57,70,0.1);
+  border: 1px solid rgba(230,57,70,0.3);
+  border-radius: 10px;
+  font-size: 13px;
+  color: #ffdada;
+}

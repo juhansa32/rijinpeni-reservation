@@ -2,13 +2,13 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>예매 신청 | RIJINPENI</title>
+<title>예매하기 | RIJINPENI</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
+<header class="hero-sub">
 <img src="images/logo.png" class="logo">
 <p class="fan">예매 신청 페이지</p>
 </header>
@@ -16,14 +16,14 @@
 <section class="section">
 <h2>🎟 티켓 선택</h2>
 <label>스탠딩 (50,000원)
-<select data-price="50000">
-<option value="0">0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+<select>
+<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
 </select>
 </label>
 
 <label>좌석 (65,000원)
-<select data-price="65000">
-<option value="0">0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+<select>
+<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
 </select>
 </label>
 </section>
@@ -34,24 +34,12 @@
 <input type="tel" placeholder="휴대폰 번호">
 </section>
 
-<section class="section">
-<h2>🧭 예매 절차 안내</h2>
-<ol class="process">
-<li>예매 신청 접수</li>
-<li>입금 안내 문자 발송</li>
-<li>입금 확인 후 예매 확정</li>
-<li>공연 당일 현장 수령</li>
-</ol>
-</section>
-
 <section class="section total">
-<p id="summary">선택 내역 없음</p>
-<p id="total">0 원</p>
 <button onclick="submitForm()">예매 신청</button>
 </section>
 
 <footer>
-<p>⚠️ 실제 결제는 이루어지지 않습니다.</p>
+<p>입금 안내는 문자로 발송됩니다.</p>
 </footer>
 
 <script src="script.js"></script>

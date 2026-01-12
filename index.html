@@ -5,6 +5,7 @@
   <title>Rijinpeni Of Anniversary</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="favicon.ico" />
+
   <style>
     body {
       margin: 0;
@@ -16,7 +17,7 @@
     /* HERO */
     .hero {
       height: 100vh;
-      background: url("hero-poster.jpg") center top / cover no-repeat;
+      background: url("hero-poster.jpg") center 20% / cover no-repeat;
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -44,7 +45,8 @@
 
     .hero-content p {
       font-size: 14px;
-      opacity: 0.8;
+      opacity: 0.85;
+      line-height: 1.5;
     }
 
     section {
@@ -55,7 +57,7 @@
 
     h2 {
       font-size: 22px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       letter-spacing: 1px;
     }
 
@@ -65,27 +67,38 @@
       margin: 6px 0;
     }
 
-    /* SETLIST */
-    .setlist {
-      max-width: 500px;
+    /* SET LIST */
+    .setlist-short {
+      max-width: 520px;
       margin: 0 auto;
       text-align: left;
       font-size: 14px;
-      line-height: 1.8;
+      line-height: 1.9;
+      max-height: 260px;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
     }
 
-    .setlist a {
+    .setlist-short.open {
+      max-height: 1200px;
+    }
+
+    .setlist-short li {
+      opacity: 0.9;
+    }
+
+    .setlist-btn {
+      margin-top: 24px;
+      background: none;
+      border: 1px solid #555;
       color: #fff;
-      text-decoration: none;
-      opacity: 0.85;
+      padding: 10px 24px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
     }
 
-    .setlist a:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
-
-    /* MD preview */
+    /* MD */
     .md-preview {
       display: flex;
       gap: 16px;
@@ -95,7 +108,7 @@
 
     .md-preview img {
       width: 140px;
-      border-radius: 12px;
+      border-radius: 14px;
     }
 
     /* CTA */
@@ -103,11 +116,35 @@
       background: #fff;
       color: #000;
       display: inline-block;
-      padding: 16px 36px;
+      padding: 16px 38px;
       border-radius: 30px;
       font-weight: bold;
       text-decoration: none;
+      margin-top: 36px;
+    }
+
+    /* TRANSPORT */
+    .map-box img {
+      max-width: 100%;
+      border-radius: 14px;
+      margin: 24px 0;
+    }
+
+    .transport-info h3 {
       margin-top: 30px;
+      font-size: 16px;
+    }
+
+    .bus span {
+      display: inline-block;
+      width: 48px;
+      font-weight: bold;
+    }
+
+    .warning {
+      margin-top: 20px;
+      font-size: 13px;
+      opacity: 0.75;
     }
 
     footer {
@@ -124,7 +161,7 @@
   <!-- HERO -->
   <div class="hero">
     <div class="hero-content">
-      <img src="images/logo.png" alt="logo" />
+      <img src="images/logo.png" alt="logo">
       <p>2026.02.21 SAT 17:00<br>WEST BRIDGE LIVE HALL</p>
     </div>
   </div>
@@ -137,37 +174,36 @@
     <p>웨스트브릿지 라이브홀</p>
   </section>
 
-  <!-- SETLIST -->
- <section id="setlist">
-  <h2>SET LIST</h2>
+  <!-- SET LIST -->
+  <section id="setlist">
+    <h2>SET LIST</h2>
 
-  <ul class="setlist-short">
-    <li>01. ryo – Melt </li>
-    <li>02. 휴복 – 안티시티 </li>
-    <li>03. 휴복 – 여름잔상 </li>
-    <li>04. 달의하루-염라 </li>
-    <li>05. Eve – 라스트댄스</li>
-    <li>06. 요루시카 – 화성</li>
-    <li>07. 후지이 카제 – 청춘</li>
-    <li>08. 요네즈 켄시 – IRIS OUT</li>
-    <li>09. SPYAIR – 사무라이 하트</li>
-    <li>10. 휴복 – 지하철 도난 사건</li>
-    <li>11. Vaundy – 벌거벗은 용사</li>
-    <li>12. Mrs. GREEN APPLE – Familie</li>
-    <li>13. Mrs. GREEN APPLE – 쿠스시키 </li>
-    <li>14. DECO*27 – 망상감상대상연맹 (휴복 ver.)</li>
-    <li>15. Mrs. GREEN APPLE – Good Day (휴복 ver.)</li>
-    <li>16. Official髭男dism – TATTOO</li>
-    <li>17. Mrs. GREEN APPLE – 라일락 (KR / 휴복 ver.)</li>
-    <li>18. 하루요시 – Blessing (KOREA EDITION)</li>
-    <li>미공개곡 2곡<li>
-  </ul>
+    <ul class="setlist-short">
+      <li>01. ryo – Melt</li>
+      <li>02. 휴복 – 안티시티</li>
+      <li>03. 휴복 – 여름잔상</li>
+      <li>04. 달의하루 – 염라</li>
+      <li>05. Eve – 라스트댄스</li>
+      <li>06. 요루시카 – 화성</li>
+      <li>07. 후지이 카제 – 청춘</li>
+      <li>08. 요네즈 켄시 – IRIS OUT</li>
+      <li>09. SPYAIR – 사무라이 하트</li>
+      <li>10. 휴복 – 지하철 도난 사건</li>
+      <li>11. Vaundy – 벌거벗은 용사</li>
+      <li>12. Mrs. GREEN APPLE – Familie</li>
+      <li>13. Mrs. GREEN APPLE – 쿠스시키</li>
+      <li>14. DECO*27 – 망상감상대상연맹 (휴복 ver.)</li>
+      <li>15. Mrs. GREEN APPLE – Good Day (휴복 ver.)</li>
+      <li>16. Official髭男dism – TATTOO</li>
+      <li>17. Mrs. GREEN APPLE – 라일락 (KR / 휴복 ver.)</li>
+      <li>18. 하루요시 – Blessing (KOREA EDITION)</li>
+      <li>미공개곡 2곡</li>
+    </ul>
 
-  <button id="toggleSetlist" class="setlist-btn">
-    SET LIST 전체 보기 ▼
-  </button>
-</section>
-
+    <button id="toggleSetlist" class="setlist-btn">
+      SET LIST 전체 보기 ▼
+    </button>
+  </section>
 
   <!-- MD -->
   <section>
@@ -183,72 +219,52 @@
     </a>
   </section>
 
- <section class="section transport">
-  <h2>📍 오시는 길</h2>
+  <!-- TRANSPORT -->
+  <section>
+    <h2>📍 오시는 길</h2>
 
-  <div class="venue">
     <strong>웨스트브릿지 라이브홀</strong>
-  </div>
 
-  <div class="map-box">
-    <img src="../images/map.png" alt="웨스트브릿지 라이브홀 위치 지도">
-  </div>
+    <div class="map-box">
+      <img src="images/map.png" alt="웨스트브릿지 라이브홀 위치 지도">
+    </div>
 
-  <div class="transport-info">
+    <div class="transport-info">
+      <h3>🚇 지하철</h3>
+      <p>2호선 / 공항철도 / 경의중앙선<br><strong>홍대입구역 8번 출구</strong></p>
 
-    <h3>🚇 지하철 이용 시</h3>
-    <p>
-      2호선 / 공항철도 / 경의중앙선<br>
-      <strong>홍대입구역 8번 출구</strong> 하차 후 도보 이동
-    </p>
+      <h3>🚌 버스</h3>
+      <p class="bus"><span>지선</span>5712, 5714, 6713, 6716, 7016, 7612, 7711, 7737, 7739</p>
+      <p class="bus"><span>간선</span>271, 273, 602, 603, 604, 761, 921</p>
+      <p class="bus"><span>직행</span>1004, 3000, 3100, 3100N, 7101, G6000, M6117, M6628, M7731</p>
+      <p class="bus"><span>일반</span>마포09</p>
+      <p class="bus"><span>공항</span>6002</p>
 
-    <h3>🚌 버스 이용 시</h3>
-    <p><strong>홍대입구역 하차</strong></p>
-
-    <p class="bus">
-      <span>지선</span>
-      5712, 5714, 6713, 6716, 7016, 7612, 7711, 7737, 7739
-    </p>
-
-    <p class="bus">
-      <span>간선</span>
-      271, 273, 602, 603, 604, 761, 921
-    </p>
-
-    <p class="bus">
-      <span>직행</span>
-      1004, 3000, 3100, 3100N, 7101, G6000,<br>
-      이음1, 1000, 1100, 1101, 1200,<br>
-      1300, 1301, 1302, 1601, M6117, M6628, M7731
-    </p>
-
-    <p class="bus">
-      <span>일반</span> 마포09
-    </p>
-
-    <p class="bus">
-      <span>공항</span> 6002
-    </p>
-
-    <h3>🚗 주차 안내</h3>
-    <p>
-      공연장 내 <strong>주차는 불가</strong>하오니<br>
-      가급적 <strong>대중교통 이용</strong>을 부탁드립니다.
-    </p>
-
-    <p class="warning">
-      교통 상황 또는 주차 문제로 인해 공연장에 늦게 도착하여<br>
-      관람이 지연될 경우 <strong>티켓 취소 및 환불은 불가</strong>합니다.
-    </p>
-
-  </div>
-</section>
-
+      <p class="warning">
+        주차 불가 · 대중교통 이용 권장<br>
+        지각 입장 시 취소 및 환불 불가
+      </p>
+    </div>
+  </section>
 
   <footer>
     ⓒ Rijinpeni Anniversary Fan Project<br>
     본 사이트는 팬 제작 페이지입니다.
   </footer>
 
+  <!-- SET LIST TOGGLE SCRIPT -->
+  <script>
+    const btn = document.getElementById("toggleSetlist");
+    const list = document.querySelector(".setlist-short");
+
+    btn.addEventListener("click", () => {
+      list.classList.toggle("open");
+      btn.textContent = list.classList.contains("open")
+        ? "SET LIST 접기 ▲"
+        : "SET LIST 전체 보기 ▼";
+    });
+  </script>
+
 </body>
 </html>
+

@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>RIJINPENI LIVE 예매</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>예매 신청 | RIJINPENI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="reserve-header">
-  <h1>RIJINPENI LIVE 2026 예매</h1>
-  <p>웨스트브릿지 라이브홀</p>
+<header class="hero">
+<img src="images/logo.png" class="logo">
+<p class="fan">예매 신청 페이지</p>
 </header>
 
 <section class="section">
-  <h2>예매자 정보</h2>
-  <label>이름
-    <input type="text" required>
-  </label>
-  <label>휴대폰 번호
-    <input type="tel" placeholder="010-0000-0000" required>
-  </label>
+<h2>🎟 티켓 선택</h2>
+<label>스탠딩 (50,000원)
+<select data-price="50000">
+<option value="0">0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+</select>
+</label>
+
+<label>좌석 (65,000원)
+<select data-price="65000">
+<option value="0">0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+</select>
+</label>
 </section>
 
 <section class="section">
-  <h2>티켓 수량</h2>
-  <label>
-    일반 티켓 (₩55,000)
-    <input type="number" min="1" max="2" value="1">
-  </label>
+<h2>🙋 신청자 정보</h2>
+<input type="text" placeholder="이름">
+<input type="tel" placeholder="휴대폰 번호">
 </section>
 
 <section class="section">
-  <h2>굿즈 (선택)</h2>
-  <label>
-    A2 포스터
-    <input type="number" min="0" max="2" value="0">
-  </label>
+<h2>🧭 예매 절차 안내</h2>
+<ol class="process">
+<li>예매 신청 접수</li>
+<li>입금 안내 문자 발송</li>
+<li>입금 확인 후 예매 확정</li>
+<li>공연 당일 현장 수령</li>
+</ol>
 </section>
 
-<section class="section">
-  <h2>예매 유의사항</h2>
-  <ul class="process">
-    <li>본 페이지는 팬 제작 예매 신청 페이지입니다.</li>
-    <li>결제는 별도 안내에 따라 진행됩니다.</li>
-    <li>입금 완료 후 예매 확정됩니다.</li>
-    <li>공연 당일 지각 시 입장 제한이 있을 수 있습니다.</li>
-  </ul>
+<section class="section total">
+<p id="summary">선택 내역 없음</p>
+<p id="total">0 원</p>
+<button onclick="submitForm()">예매 신청</button>
 </section>
 
-<section class="section">
-  <label>
-    <input type="checkbox" required>
-    위 내용을 모두 확인하였으며 동의합니다.
-  </label>
-</section>
+<footer>
+<p>⚠️ 실제 결제는 이루어지지 않습니다.</p>
+</footer>
 
-<div class="fixed-bar">
-  <button onclick="alert('예매 신청이 접수되었습니다.\n결제 안내는 문자로 발송됩니다.')">
-    예매 신청하기
-  </button>
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>
